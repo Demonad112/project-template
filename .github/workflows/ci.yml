@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate repo config
+        run: |
+          jq empty .claude/settings.json
+          bash -n .claude/hooks/session-start.sh
+          bash -n docs/cloud-environment-setup.sh
+      # Replace with real lint/typecheck/test steps for the project.
