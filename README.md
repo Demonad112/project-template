@@ -18,4 +18,3 @@ GitHub template repository for new projects. It carries Claude Code configuratio
 | `.github/` | CI workflow, PR and issue templates |
 | `docs/decisions.md` | Decision log |
 | `docs/cloud-environment-setup.sh` | Setup script for a Claude Code cloud environment |
-| `docs/host-profile.md` | Host-app profile for the remote-console work |
